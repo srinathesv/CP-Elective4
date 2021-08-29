@@ -33,11 +33,28 @@ Asian City - Country"""
 
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
-    pass
+    #sort the cities according to cities in USA
+    usCity=locations['North America']['USA']
+    usCity.sort()
+    return usCity
+   
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    pass
-
+    #sort cities according in asia
+    locAsia=locations['Asia']
+    print(locAsia)
+    s=''    
+    asiaCity=[]   
+    for i in locAsia:        
+        s+=str(locAsia[i][0])+' - '+str(i)        
+        asiaCity.append(s)        
+        s=''    
+        asiaCity.sort()    
+    return asiaCity
 # Note: Check for test cases to understand the output format.
 locations = {'North America': {'USA': ['Mountain View']}}
+locations['Asia']= {'China':['Shanghai']}
+locations['Africa']={'Egypt':['Cairo']}
+locations['Asia']['India']=['Bangalore']
+locations['North America']['USA'].append('Atlanta')
